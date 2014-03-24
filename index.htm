@@ -1,0 +1,191 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Bootsrap 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href = "css/bootstrap.min.css" rel="stylesheet">
+        <link href ="css/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        
+<!-- ..........................................................................................NAVBAR............................................................................................... -->
+        
+        <!-- navbar-inverse nam da črno barvo navbara -->
+        <!-- navbar-static-top nam da lep črn pas, brez zaobljenih robov -->
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                
+                <!-- navbar-brand nam da ime strani -->
+                <a href="#" class="navbar-brand">My Site</a>
+                
+                <!-- this button targets navHeaderCollapse, ki se nahaja v divu 3 vrstice nižje -->
+                <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                    
+                    <!-- makes 3 bars in the right side of a nav-bar -->
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>    
+                
+                <!-- create a navigation bar, to je kontejener kjer določimo kaj bo collapsamo, ko bomo na mobitelu, ko pritisnemo tipko -->
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    
+                    <!--nav in navbar-nav nam bosta služila za ekstra styling za navigacijski bar,  navbar-right pa nam bo služil za pravo dolžino z desne navgation bar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <!-- class="active" naredi gumb home drugačnega od ostalih, skos obarvan belo.  -->
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li class = "dropdown">
+                            
+                            <!-- <b class = "caret"></b> nam da puščico(caret) ob gumbu social media -->
+                            <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
+                            <ul class = "dropdown-menu">
+                                <li><a href = "#">Facebook</a></li>
+                                <li><a href = "#">Twitter</a></li>
+                                <li><a href = "#">Google+</a></li>
+                                <li><a href = "#">Instagram</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <!--"#contact" its a reference for jQuery it's going to trigger javascript an ivent it's going to open a modal!-->
+                        <!--data-toggle-modal its goint to open a modal instead a drop down -->
+                        <li><a href="#contact" data-toggle = "modal">Contact</a></li>
+                    </ul>    
+                </div>    
+            </div>
+        </div>
+        
+<!-- ....................................................................................JUMBOTRON................................................................................................. -->
+        <div class="container">            
+            <div class = "jumbotron text-center">
+                <h1>My Story, My Life!</h1>
+                <p>Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</p>     
+                <a class = "btn btn-default">Watch now!</a>
+                <a class = "btn btn-info">Twitte it!</a>
+            </div>    
+        </div>
+       
+        
+        
+        
+<!-- .................................................................................RESPONSIVE GRID SYSTEM......................................................................................  -->
+            
+        <div class = "container">
+            <div class = "row">
+                
+                <!--md-medium screen, 3- 3 stolpci združeni skupaj v enega, tako lahko potem narediš skupaj 4. (12 je možnih) -->
+                <div class = "col-md-3">
+                    
+                    <h3><a href = "#">Sony Z1 compact</a></h3>
+                    <p>Sony is the first to deliver a smartphone, which wouldn't let size get in the way of performance or screen quality. It's no accident that it's a compact rather than a mini - the Snapdragon 800-powered beast would be ashamed to share a name with the upper-midrange (at best) wannabes of the competition.</p>
+                    <a href = "#" class = "btn btn-info">Read More</a>
+                </div>
+                
+                <div class = "col-md-3">
+                    
+                    <h3><a href = "#">Sony Z1 compact</a></h3>
+                    <p>Sony is the first to deliver a smartphone, which wouldn't let size get in the way of performance or screen quality. It's no accident that it's a compact rather than a mini - the Snapdragon 800-powered beast would be ashamed to share a name with the upper-midrange (at best) wannabes of the competition.</p>
+                    <a href = "#" class = "btn btn-info">Read More</a>
+                </div>
+                
+                <div class = "col-md-3">
+                    
+                    <h3><a href = "#">Sony Z1 compact</a></h3>
+                    <p>Sony is the first to deliver a smartphone, which wouldn't let size get in the way of performance or screen quality. It's no accident that it's a compact rather than a mini - the Snapdragon 800-powered beast would be ashamed to share a name with the upper-midrange (at best) wannabes of the competition.</p>
+                    <a href = "#" class = "btn btn-info">Read More</a>
+                </div>
+                
+                <div class = "col-md-3">
+                    
+                    <h3><a href = "#">Sony Z1 compact</a></h3>
+                    <p>Sony is the first to deliver a smartphone, which wouldn't let size get in the way of performance or screen quality. It's no accident that it's a compact rather than a mini - the Snapdragon 800-powered beast would be ashamed to share a name with the upper-midrange (at best) wannabes of the competition.</p>
+                    <a href = "#" class = "btn btn-info">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+<!-- ..............................................................................STICKY FOOTER ON THE BOTTOM of the page.......................................................................... -->
+        <!--navbar-default skrbi za sivkasto bel pas--> 
+        <!-- navbar-fixed-bottom skrbi da je fiksiran na dno zaslona -->
+        <div class = "navbar navbar-default navbar-fixed-bottom">
+            
+            <!-- makes shore the content is aligned horizontali on the screen -->
+            <div class = "container">
+                <!-- class="navbar-text" skrbi da je tekst  po vertikali na sredini sivega polja -->
+                <!-- pull-left  prestavi gumb na levo-->
+                <p class = "navbar-text pull-left">Site Built By Mitja Kastelic</p>
+                
+                <!-- btn-danger nam da rdeče obarvan gumb -->
+                <!-- btn je globalni class za gumbe, da je lepo oblikovan -->
+                <!-- pull-right potegne gumb na desno-->
+                <a href = "#" class = "navbar-btn btn-danger btn pull-right">Suscribe on Youtube</a>
+            </div>  
+        
+        </div>
+  
+        
+        
+        
+       <!-- ..................................................MODAL.......................................................................... -->
+        
+        <div class = "modal fade" id = "contact" role = "dialog">
+            <div class = "modal-dialog">
+                <div class = "modal-content">
+                    <form class = "form-horizontal">
+                        <div class = "modal-header">
+                            <h4>Contact Me</h4>
+                        </div>
+                    
+                        <div class = "modal-body">
+                            
+                            <!--VRSTICA ZA IME .... form-group is one row -->
+                            <div class = "form-group"> 
+                                <label for = "contact-name" class = "col-lg-2 control-label">Name:</label>
+                                <div class = "col-lg-10">
+                                    <input type = "text" class = "form-control" id = "contact-name" placeholder = "Full Name">
+                                </div>
+                            </div>
+                            
+                             <!--VRSTICA ZA Email .... form-group is one row -->
+                            <div class = "form-group"> 
+                                <label for = "contact-email" class = "col-lg-2 control-label">Email:</label>
+                                <div class = "col-lg-10">
+                                    <input type = "email" class = "form-control" id = "contact-email" placeholder = "you@example.com">
+                                </div>
+                            </div>
+                            
+                             <!--VRSTICA ZA TEXT  .... form-group is one row -->
+                            <div class = "form-group"> 
+                                <label for = "contact-msg" class = "col-lg-2 control-label">Message:</label>
+                                <div class = "col-lg-10">
+                                    <textarea class = "form-control" rows = "8"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class = "modal-footer">
+                        <!--data-dismiss = it's going to close something, in this case modal! -->
+                            <a class = "btn btn-default" data-dismiss = "modal">Close</a>
+                            <button class = "btn btn-primary" type = "submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        
+        
+<!-- ............................................................import yQuery and bootstrap java script............................................................................................ -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        
+    </body>
+
+</html>
+
+<!-- we are creating a navigation bar which will contain the site name and a navigation which includes a dropdown button. This navigation bar will be responsive so will scale down appropriately for small screens such as mobiles and 7" tablets. -->
